@@ -38,39 +38,7 @@
                             <!--    
                                                             Contenido col 8 para eventos
                             -->
-                            <div class="col-md-8">
-                                <div class="container-fluid">
-                                    <div class="row transparent">
-
-
-                                        <f:view>
-                                            <h:form>
-                                                <ui:repeat value="#{diarioSurBean.mostrarTodosLosEventosRevisados()}" var="ev"  varStatus="estado">  
-                                                    <div class="col-md-6">
-                                                        <div class="tuyin first evento#{ev.id}" id="evento#{ev.id}">
-                                                            <span class="title">
-                                                                <h:commandButton class="btn btn-link title" value="#{ev.titulo}" action="#{diarioSurBean.verEvento(ev)}"/> 
-                                                            </span>
-                                                            <div class="plan-name">#{ev.subtitulo}</div>
-                                                            <div class="text">
-                                                                <p>#{ev.descripcion}</p>
-                                                                <p>#{ev.precio} €</p>
-                                                                <p class="small pull-left" ><span class="glyphicon glyphicon-time"></span> #{diarioSurBean.mostrarFechaDeEvento(ev)}</p>  
-                                                                <div id="" class="#{!diarioSurBean.isLogin()? 'stars-existing':''} starrr pull-right" role="#{ev.id}" data-rating='#{diarioSurBean.mostrarPuntuacionMedia(ev)}'></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </ui:repeat>  
-
-                                            </h:form>	
-                                        </f:view>
-
-
-
-                                    </div>
-                                </div>
-
-                            </div>
+ 
                             <!--    
                                                             Contenido col 4 para sidebar
                             -->
